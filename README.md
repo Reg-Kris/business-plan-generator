@@ -333,14 +333,53 @@ MIT License - Feel free to use, modify, and distribute for personal and commerci
 
 ---
 
+## 🌐 Web Interface (GitHub Pages)
+
+**Live Demo**: https://reg-kris.github.io/business-plan-generator/
+
+### Quick Start - Web Interface
+
+1. **Visit the live site**: https://reg-kris.github.io/business-plan-generator/
+2. **Fill out the business form** with your basic information
+3. **Click "🤖 AI Analysis"** to generate AI prompts
+4. **Copy the generated prompt** and paste it into [Claude.ai](https://claude.ai)
+5. **Copy Claude's response** back into the web interface
+6. **Generate your professional business plan PDF**
+
+### Web Interface Features
+
+- ✅ **Professional Form Interface**: Comprehensive business planning form
+- ✅ **AI Prompt Generation**: Custom Claude prompts for SWOT, financial, market, and strategy analysis
+- ✅ **One-Click Copy**: Easy prompt copying to Claude.ai
+- ✅ **AI Results Integration**: Paste Claude's analysis back for enhanced business plans
+- ✅ **PDF Generation**: Professional business plan PDF download
+- ✅ **Mobile Responsive**: Works perfectly on all devices
+- ✅ **No Installation Required**: Zero setup, instant access
+
+### How to Use the AI Analysis
+
+1. **Fill Basic Info**: Enter business name, industry, and description
+2. **Click "🤖 AI Analysis"**: Opens the AI analysis section
+3. **Choose Analysis Type**: Select SWOT, Financial, Market, or Strategy tabs
+4. **Copy Prompt**: Click "📋 Copy Prompt" to copy the generated prompt
+5. **Visit Claude.ai**: Paste the prompt into Claude for analysis
+6. **Paste Results**: Copy Claude's response back into the "AI Results" box
+7. **Process Analysis**: Click "Process Analysis" to integrate into your business plan
+8. **Generate PDF**: Create your enhanced business plan with AI insights
+
 ## 🚀 Get Started Today
 
 Transform your business planning with AI-powered automation:
 
+### Option 1: Web Interface (Recommended)
+1. **Visit**: https://reg-kris.github.io/business-plan-generator/
+2. **Generate AI prompts** and use with Claude.ai
+3. **Create professional business plans** instantly
+
+### Option 2: Claude Desktop Integration
 1. **Clone the repository**
-2. **Configure Claude Desktop**  
-3. **Start generating professional business plans**
-4. **Scale your consulting or entrepreneurial capabilities**
+2. **Configure Claude Desktop** with MCP servers
+3. **Use advanced agentic workflow** for comprehensive analysis
 
 **Ready to revolutionize business planning? Let's build the future together! 🚀**
 
