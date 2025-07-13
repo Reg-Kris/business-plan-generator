@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "business-consultant": {
+      "command": "/Users/kg/WebstormProjects/business-plan-generator/src/server.js",
+      "args": [],
+      "env": {}
+    },
+    "market-research": {
+      "command": "/Users/kg/WebstormProjects/business-plan-generator/mcp-servers/market-research/server.js",
+      "args": [],
+      "env": {}
+    },
+    "document-generation": {
+      "command": "/Users/kg/WebstormProjects/business-plan-generator/mcp-servers/document-generation/server.js",
+      "args": [],
+      "env": {}
+    },
+    "knowledge-base": {
+      "command": "/Users/kg/WebstormProjects/business-plan-generator/mcp-servers/knowledge-base/server.js",
+      "args": [],
+      "env": {}
+    },
+    "business-plan-orchestrator": {
+      "command": "/Users/kg/WebstormProjects/business-plan-generator/mcp-servers/orchestration/server.js",
+      "args": [],
+      "env": {}
+    }
+  }
+}

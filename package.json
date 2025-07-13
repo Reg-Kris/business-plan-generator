@@ -1,7 +1,7 @@
 {
   "name": "business-plan-generator",
-  "version": "1.0.0",
-  "description": "A web application for generating comprehensive business plans with rich text and diagrams",
+  "version": "2.0.0",
+  "description": "Advanced AI-powered business plan generator with agentic MCP architecture",
   "main": "index.html",
   "scripts": {
     "dev": "python3 -m http.server 8080",
@@ -9,29 +9,45 @@
     "start": "python3 -m http.server 8080",
     "build": "tsc",
     "mcp": "node src/server.js",
-    "mcp:dev": "node src/server.js"
+    "mcp:dev": "node src/server.js",
+    "mcp:market-research": "node mcp-servers/market-research/server.js",
+    "mcp:document-generation": "node mcp-servers/document-generation/server.js",
+    "mcp:knowledge-base": "node mcp-servers/knowledge-base/server.js",
+    "mcp:orchestration": "node mcp-servers/orchestration/server.js",
+    "mcp:all": "concurrently \"npm run mcp\" \"npm run mcp:market-research\" \"npm run mcp:document-generation\" \"npm run mcp:knowledge-base\" \"npm run mcp:orchestration\"",
+    "install-deps": "npm install @modelcontextprotocol/sdk zod concurrently",
+    "setup": "npm run install-deps && mkdir -p generated-business-plans"
   },
   "keywords": [
     "business-plan",
     "generator",
+    "ai",
+    "mcp",
+    "claude",
+    "agentic",
+    "research",
+    "automation",
     "pdf",
-    "forms",
-    "diagrams",
-    "javascript"
+    "analysis"
   ],
-  "author": "Your Name",
+  "author": "Business Plan Generator Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "."
+    "url": "https://github.com/Reg-Kris/business-plan-generator.git"
   },
-  "homepage": "http://.",
-  "type": "commonjs",
+  "homepage": "https://github.com/Reg-Kris/business-plan-generator",
+  "type": "module",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.1",
     "@types/node": "^24.0.13",
+    "concurrently": "^9.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "zod": "^3.25.76"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
