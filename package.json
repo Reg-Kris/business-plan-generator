@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "python3 -m http.server 8080",
     "serve": "python3 -m http.server 8080",
-    "start": "python3 -m http.server 8080"
+    "start": "python3 -m http.server 8080",
+    "build": "tsc",
+    "mcp": "node src/server.js",
+    "mcp:dev": "node src/server.js"
   },
   "keywords": [
     "business-plan",
@@ -18,14 +21,17 @@
   ],
   "author": "Your Name",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "."
   },
-  "bugs": {
-    "url": "."
-  },
-  "homepage": "."
+  "homepage": "http://.",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "@types/node": "^24.0.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.76"
+  }
 }
