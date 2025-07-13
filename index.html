@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Plan Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Business Plan Generator</h1>
+            <p>Create comprehensive business plans with rich content and visualizations</p>
+        </header>
+
+        <form id="businessPlanForm" class="form-container">
+            <section class="form-section">
+                <h2>Business Overview</h2>
+                <div class="form-group">
+                    <label for="businessName">Business Name *</label>
+                    <input type="text" id="businessName" name="businessName" required>
+                </div>
+                <div class="form-group">
+                    <label for="businessType">Business Type *</label>
+                    <select id="businessType" name="businessType" required>
+                        <option value="">Select business type</option>
+                        <option value="sole-proprietorship">Sole Proprietorship</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="llc">LLC</option>
+                        <option value="corporation">Corporation</option>
+                        <option value="nonprofit">Nonprofit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry *</label>
+                    <input type="text" id="industry" name="industry" required>
+                </div>
+                <div class="form-group">
+                    <label for="businessDescription">Business Description *</label>
+                    <textarea id="businessDescription" name="businessDescription" rows="4" required 
+                              placeholder="Describe your business, its mission, and core activities"></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Market Analysis</h2>
+                <div class="form-group">
+                    <label for="targetMarket">Target Market *</label>
+                    <textarea id="targetMarket" name="targetMarket" rows="3" required
+                              placeholder="Describe your target customers and market size"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="competitors">Key Competitors</label>
+                    <textarea id="competitors" name="competitors" rows="3"
+                              placeholder="List and describe your main competitors"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="marketSize">Estimated Market Size</label>
+                    <input type="text" id="marketSize" name="marketSize" placeholder="e.g., $50M annually">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Financial Projections</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startupCosts">Startup Costs ($)</label>
+                        <input type="number" id="startupCosts" name="startupCosts" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyExpenses">Monthly Operating Expenses ($)</label>
+                        <input type="number" id="monthlyExpenses" name="monthlyExpenses" min="0">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="year1Revenue">Year 1 Revenue Projection ($)</label>
+                        <input type="number" id="year1Revenue" name="year1Revenue" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="year2Revenue">Year 2 Revenue Projection ($)</label>
+                        <input type="number" id="year2Revenue" name="year2Revenue" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fundingNeeded">Funding Needed ($)</label>
+                    <input type="number" id="fundingNeeded" name="fundingNeeded" min="0">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Team & Operations</h2>
+                <div class="form-group">
+                    <label for="teamMembers">Key Team Members</label>
+                    <textarea id="teamMembers" name="teamMembers" rows="3"
+                              placeholder="List key team members and their roles"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="location">Business Location</label>
+                    <input type="text" id="location" name="location" placeholder="City, State/Country">
+                </div>
+                <div class="form-group">
+                    <label for="operations">Operations Overview</label>
+                    <textarea id="operations" name="operations" rows="3"
+                              placeholder="Describe how your business will operate day-to-day"></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Marketing & Strategy</h2>
+                <div class="form-group">
+                    <label for="marketingStrategy">Marketing Strategy</label>
+                    <textarea id="marketingStrategy" name="marketingStrategy" rows="3"
+                              placeholder="Describe your marketing and customer acquisition strategy"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="uniqueValue">Unique Value Proposition</label>
+                    <textarea id="uniqueValue" name="uniqueValue" rows="3"
+                              placeholder="What makes your business unique and valuable to customers?"></textarea>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="button" id="previewBtn" class="btn btn-secondary">Preview</button>
+                <button type="button" id="generateBtn" class="btn btn-primary">Generate Business Plan PDF</button>
+            </div>
+        </form>
+
+        <div id="previewSection" class="preview-section" style="display: none;">
+            <h2>Business Plan Preview</h2>
+            <div id="previewContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
